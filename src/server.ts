@@ -4,8 +4,10 @@ import cors from "cors";
 import helmet from "helmet";
 import logger from "./middlewares/logger.middleware";
 import routes from "./routes/index";
+import connectDB from "./config/db";
 
 dotenv.config();
+connectDB();
 const app = express();
 
 app.use(express.json());
